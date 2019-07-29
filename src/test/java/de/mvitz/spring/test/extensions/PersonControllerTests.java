@@ -27,11 +27,11 @@ public class PersonControllerTests {
     @Test
     void list_shouldRenderListOfKnownPersonNames() {
         jdbcTemplate.execute("TRUNCATE TABLE person");
-        jdbcTemplate.execute("INSERT INTO person (name) VALUES ('Ein Test'), ('Hallo Welt')");
+        jdbcTemplate.execute("INSERT INTO person (firstname, lastname) VALUES ('Ein', 'Test'), ('Hallo', 'Welt')");
 
          String content = restTemplate.getForObject("http://localhost:" + port + "/person", String.class);
 
          assertThat(content)
-             .isEqualTo("Ein Test, Hallo Welt");
+             .isEqualTo("Test, Ein; Welt, Hallo");
     }
 }

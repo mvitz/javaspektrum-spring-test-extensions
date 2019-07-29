@@ -19,8 +19,8 @@ public class PersonController {
     @GetMapping("/person")
     public String list() {
         List<String> persons = jdbcTemplate.query("SELECT * FROM person", (rs, rowNum) -> {
-            return rs.getString("name");
+            return rs.getString("lastname") + ", " + rs.getString("firstname");
         });
-        return persons.stream().collect(Collectors.joining(", "));
+        return persons.stream().collect(Collectors.joining("; "));
     }
 }
