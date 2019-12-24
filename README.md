@@ -6,6 +6,9 @@ These examples were written for my german [JavaSPEKTRUM](http://www.javaspektrum
 "Der Praktiker: JUnit5 für das Testen von Spring Boot-Anwendungen - Das perfekte
 Doppel".
 
+You can read it online [here](https://www.innoq.com/de/articles/2019/12/junit5-spring-boot-tests/)
+or download as PDF [here](http://www.sigs.de/publications/download/Artikel/vitz_JS_05_19_ihgh.pdf).
+
 
 ## License
 
